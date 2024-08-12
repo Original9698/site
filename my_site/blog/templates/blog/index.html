@@ -1,0 +1,13 @@
+{%extends 'main_base.html'%}
+{%block content%}
+  <div class="leftcolumn">
+    {%for key,value in post_dict.items%}
+    <div class="card">
+      <h2><a href="{% url 'posts_name' name_post=key %}">{{value.name}}</a></h2>
+      <h5>{{value.date}}</h5>
+      <div class="fakeimg" style="height:200px;">{{value.image}}</div>
+      <p>{{value.text}}</p>
+    </div>
+    {%endfor%}
+  </div>
+{%endblock%}

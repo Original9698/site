@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block title%}
+    Содержание
+{%endblock%}
+
+{%block content%}
+    <h2>Список всех постов</h2>
+    <ul>
+    {% for list in lists %}
+        <li><a href="{%url 'posts_name' name_post=list%}">{{list|title}}</a></li>
+    {% endfor %}
+    </ul>
+{%endblock%}
